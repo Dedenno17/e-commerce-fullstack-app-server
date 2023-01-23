@@ -24,7 +24,7 @@ export const postRegister = async (req, res) => {
 // login
 export const postLogin = async (req, res) => {
   try {
-    const user = await User.find({ username: req.body.username });
+    const user = await User.findOne({ username: req.body.username });
 
     // CHECK IF USERNAME WAS THERE
     if (!user) {

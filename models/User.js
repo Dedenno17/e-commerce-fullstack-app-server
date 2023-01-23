@@ -24,10 +24,22 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    city: String,
-    country: String,
-    address: String,
-    picture: String,
+    city: {
+      type: String,
+      default: '',
+    },
+    country: {
+      type: String,
+      default: '',
+    },
+    address: {
+      type: String,
+      default: '',
+    },
+    picture: {
+      type: String,
+      default: null,
+    },
   },
   { timestamps: true }
 );
