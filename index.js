@@ -7,10 +7,10 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 
 // routes
-import userRoutes from './routes/user.js';
-import authRoutes from './routes/auth.js';
-import cartRoutes from './routes/cart.js';
-import productRoutes from './routes/product.js';
+import userRoutes from './routes/userRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 
 // SETUP
 const app = express();
