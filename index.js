@@ -12,6 +12,9 @@ import authRoutes from './routes/authRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 
+// import Product from './models/Product.js';
+// import { productsData } from './data/index.js';
+
 // SETUP
 const app = express();
 dotenv.config();
@@ -33,7 +36,9 @@ app.use('/api/products', productRoutes);
 mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log('connect to mongodb is successful!'))
+  .then(() => {
+    console.log('connect to mongodb is successful!');
+  })
   .catch((err) => console.log({ err }));
 
 // port
