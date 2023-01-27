@@ -11,6 +11,7 @@ import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import productRoutes from './routes/productRoutes.js';
+import reviewsRoutes from './routes/reviewsRoute.js';
 
 // import Product from './models/Product.js';
 // import { productsData } from './data/index.js';
@@ -27,10 +28,11 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 
 // ROUTES
-app.use('/api/users', userRoutes);
+// app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/reviews', reviewsRoutes);
 
 // connect to mongodb
 mongoose.set('strictQuery', false);
