@@ -12,9 +12,11 @@ import authRoutes from './routes/authRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import reviewsRoutes from './routes/reviewsRoute.js';
+import blogRoutes from './routes/blogRoutes.js';
 
 // import Product from './models/Product.js';
-// import { productsData } from './data/index.js';
+// import Blog from './models/Blog.js';
+// import { productsData, blogsData } from './data/index.js';
 
 // SETUP
 const app = express();
@@ -33,6 +35,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/reviews', reviewsRoutes);
+app.use('/api/blogs', blogRoutes);
 
 // connect to mongodb
 mongoose.set('strictQuery', false);
