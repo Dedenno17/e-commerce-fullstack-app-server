@@ -1,4 +1,5 @@
 import Product from '../models/Product.js';
+import RelatedProduct from '../models/RelatedProduct.js';
 
 // get all products
 export const getProducts = async (req, res) => {
@@ -36,6 +37,18 @@ export const getProductSearch = async (req, res) => {
     }
 
     res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// get related products
+export const getRelatedProduts = async (req, res) => {
+  const { productId } = req.params;
+
+  try {
+    const relatedProducts = await RelatedProduct.find({ productId: productId });
+    res.status(200).json(relatedProducts);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

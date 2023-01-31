@@ -3,6 +3,7 @@ import {
   getProducts,
   getSingleProduct,
   getProductSearch,
+  getRelatedProduts,
 } from '../controllers/products.js';
 
 const router = express.Router();
@@ -15,5 +16,8 @@ router.get('/find/:id', getSingleProduct);
 
 // get products from search
 router.get('/search', getProductSearch);
+
+// get related products
+router.get('/similar/:productId', getRelatedProduts);
 
 export default router;
