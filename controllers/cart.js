@@ -14,13 +14,13 @@ export const createCart = async (req, res) => {
 
 // get user cart
 export const getCart = async (req, res) => {
-  const id = req.params.userId;
+  const id = req.params.id;
   try {
-    // const userCart = await Cart.findOne({ userId: id });
-    // if (!userCart) {
-    //   res.status(404).json('Not Found');
-    // }
-    res.status(200).json('User Cart');
+    const userCart = await Cart.findOne({ userId: id });
+    if (!userCart) {
+      res.status(404).json('Not Found');
+    }
+    res.status(200).json(userCart);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
