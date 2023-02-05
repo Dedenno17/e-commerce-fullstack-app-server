@@ -1,14 +1,14 @@
 import express from 'express';
-import { verifyTokenAndAuthorization } from './verifyToken.js';
+import { verifyToken, verifyTokenAndAuthorization } from './verifyToken.js';
 import { createCart, getCart, updateCart } from '../controllers/cart.js';
 
 const router = express.Router();
 
 // create cart
-router.post('/', verifyTokenAndAuthorization, createCart);
+router.post('/', verifyToken, createCart);
 
 // get user cart
-router.get('/find/:userId', verifyTokenAndAuthorization, getCart);
+router.get('/find/:id', verifyTokenAndAuthorization, getCart);
 
 // update cart
 router.put('/:id', verifyTokenAndAuthorization, updateCart);
