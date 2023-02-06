@@ -5,7 +5,7 @@ import { createCart, getCart, updateCart } from '../controllers/cart.js';
 const router = express.Router();
 
 // create cart
-router.post('/', verifyToken, createCart);
+router.post('/', verifyTokenAndAuthorization, createCart);
 
 // get user cart
 router.get('/find/:id', verifyTokenAndAuthorization, getCart);

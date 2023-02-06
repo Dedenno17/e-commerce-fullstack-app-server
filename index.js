@@ -24,6 +24,8 @@ import blogRoutes from './routes/blogRoutes.js';
 const corsOptions = {
   origin: '*',
   optionsSuccessStatus: 200,
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'token'],
 };
 
 // SETUP
@@ -36,18 +38,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('common'));
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
-
-// headers
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Credentials', 'true');
-  next();
-});
 
 // ROUTES
 // app.use('/api/users', userRoutes);
