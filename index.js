@@ -20,11 +20,17 @@ import blogRoutes from './routes/blogRoutes.js';
 // import { relatedProductsData } from './data/relatedProductsData.js';
 // import { productsData, blogsData } from './data/index.js';
 
+// cors onfiguration
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200,
+};
+
 // SETUP
 const app = express();
 dotenv.config();
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('common'));
