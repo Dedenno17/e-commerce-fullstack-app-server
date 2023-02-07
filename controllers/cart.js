@@ -18,7 +18,7 @@ export const getCart = async (req, res) => {
   try {
     const userCart = await Cart.findOne({ userId: id });
     if (!userCart) {
-      res.status(404).json('Not Found');
+      res.status(201).json(null);
       return;
     }
     res.status(200).json(userCart);
