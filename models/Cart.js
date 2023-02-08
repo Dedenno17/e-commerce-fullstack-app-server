@@ -6,9 +6,14 @@ const CartSchema = new mongoose.Schema(
     products: [
       {
         prodcutsId: { type: mongoose.Types.ObjectId },
+        color: { type: String, required: true },
+        size: { type: String, required: true },
+        image: { type: String },
+        price: { type: Number, required: true },
         quantity: { type: Number, default: 1 },
       },
     ],
+    totalPrice: { type: Number },
   },
   { timestamps: true }
 );
