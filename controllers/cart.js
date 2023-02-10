@@ -29,17 +29,21 @@ export const getCart = async (req, res) => {
 
 // upadte cart
 export const updateCart = async (req, res) => {
-  const { id } = req.params;
-
   try {
-    const updatedCart = await Cart.findByIdAndUpdate(
-      id,
-      { $set: { userId: req.body.userId, products: req.body.products } },
-      {
-        new: true,
-      }
-    );
-    res.status(200).json(updatedCart);
+    const cart = await Cart.findOne({ userId: req.params.id });
+
+    if (!cart) {
+      return res.status(404).send({ error: 'Cart not found' });
+    }
+
+    const { products, totalPrice } = req.body;
+
+    cart.products = products;
+    cart.totalPrice = totalPrice;
+
+    await cart.save();
+
+    return res.send({ success: true, message: 'Cart updated successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
