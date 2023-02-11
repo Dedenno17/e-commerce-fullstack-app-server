@@ -4,7 +4,19 @@ import Blog from '../models/Blog.js';
 // get all blog
 export const getBlogs = async (req, res) => {
   try {
+    db.Blogs.aggregate([
+      {
+        $project: {
+          createdAt: {
+            $dateFromString: {
+              dateString: '$createdAt',
+            },
+          },
+        },
+      },
+    ]);
     const blogs = await Blog.find();
+
     res.status(200).json(blogs);
   } catch (error) {
     res.status(500).json({ message: error.message });
