@@ -8,6 +8,7 @@ export const productsData = [
     colors: ['white', 'red', 'yellow', 'green'],
     price: 83.5,
     favourite: 5049,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -29,6 +30,7 @@ export const productsData = [
     colors: ['cyan', 'red', 'blue', 'green'],
     price: 70.3,
     favourite: 2169,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -50,6 +52,7 @@ export const productsData = [
     colors: ['gray', 'white', 'blue', 'magenta'],
     price: 93.3,
     favourite: 1603,
+    discount: 20,
     info: {
       desc: '',
       additionalInfo: {
@@ -71,6 +74,7 @@ export const productsData = [
     colors: ['red', 'white', 'green', 'gray'],
     price: 99.0,
     favourite: 1739,
+    discount: 30,
     info: {
       desc: '',
       additionalInfo: {
@@ -92,6 +96,7 @@ export const productsData = [
     colors: ['blue', 'cyan', 'red', 'gray'],
     price: 84.2,
     favourite: 2615,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -113,6 +118,7 @@ export const productsData = [
     colors: ['gray', 'blue', 'red', 'white'],
     price: 71.2,
     favourite: 2528,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -134,6 +140,7 @@ export const productsData = [
     colors: ['green', 'white', 'magenta', 'cyan'],
     price: 61.4,
     favourite: 3318,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -155,6 +162,7 @@ export const productsData = [
     colors: ['green', 'yellow', 'black', 'magenta'],
     price: 55.9,
     favourite: 3458,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -176,6 +184,7 @@ export const productsData = [
     colors: ['red', 'yellow', 'white', 'gray'],
     price: 59.2,
     favourite: 5458,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -197,6 +206,7 @@ export const productsData = [
     colors: ['yellow', 'white', 'blue', 'green'],
     price: 87.0,
     favourite: 2516,
+    discount: 30,
     info: {
       desc: '',
       additionalInfo: {
@@ -218,6 +228,7 @@ export const productsData = [
     colors: ['black', 'gray', 'white', 'cyan'],
     price: 71.3,
     favourite: 1412,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -239,6 +250,7 @@ export const productsData = [
     colors: ['white', 'green', 'blue', 'black'],
     price: 64.9,
     favourite: 4217,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -260,6 +272,7 @@ export const productsData = [
     colors: ['blue', 'green', 'red', 'gray'],
     price: 40.6,
     favourite: 1987,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -281,6 +294,7 @@ export const productsData = [
     colors: ['gray', 'blue', 'yellow', 'black'],
     price: 84.1,
     favourite: 3922,
+    discount: 20,
     info: {
       desc: '',
       additionalInfo: {
@@ -302,6 +316,7 @@ export const productsData = [
     colors: ['yellow', 'black', 'cyan', 'purple'],
     price: 101.2,
     favourite: 4190,
+    discount: 40,
     info: {
       desc: '',
       additionalInfo: {
@@ -323,6 +338,7 @@ export const productsData = [
     colors: ['green', 'magenta', 'white', 'gray'],
     price: 78.8,
     favourite: 3812,
+    discount: 10,
     info: {
       desc: '',
       additionalInfo: {
@@ -344,6 +360,7 @@ export const productsData = [
     colors: ['gray', 'purple', 'blue', 'white'],
     price: 65.1,
     favourite: 5101,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -365,6 +382,7 @@ export const productsData = [
     colors: ['blue', 'red', 'black', 'cyan'],
     price: 79.6,
     favourite: 4296,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -386,6 +404,7 @@ export const productsData = [
     colors: ['black', 'green', 'purple', 'white'],
     price: 63.1,
     favourite: 3073,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -407,6 +426,7 @@ export const productsData = [
     colors: ['blue', 'purple', 'yellow', 'magenta'],
     price: 72.9,
     favourite: 2641,
+    discount: 10,
     info: {
       desc: '',
       additionalInfo: {
@@ -428,6 +448,7 @@ export const productsData = [
     colors: ['black', 'gray', 'blue', 'green'],
     price: 97.0,
     favourite: 3799,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -449,6 +470,7 @@ export const productsData = [
     colors: ['gray', 'white', 'red', 'green'],
     price: 82.5,
     favourite: 4829,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -470,6 +492,7 @@ export const productsData = [
     colors: ['white', 'magenta', 'red', 'cyan'],
     price: 73.5,
     favourite: 2011,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -491,6 +514,7 @@ export const productsData = [
     colors: ['brown', 'white', 'black'],
     price: 23.0,
     favourite: 5002,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -512,6 +536,7 @@ export const productsData = [
     colors: ['brown', 'white', 'black'],
     price: 103.0,
     favourite: 3461,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {
@@ -533,6 +558,7 @@ export const productsData = [
     colors: ['white', 'black', 'grey'],
     price: 114.1,
     favourite: 2610,
+    discount: 30,
     info: {
       desc: '',
       additionalInfo: {
@@ -554,6 +580,7 @@ export const productsData = [
     colors: ['brown', 'black', 'white'],
     price: 107.8,
     favourite: 1429,
+    discount: null,
     info: {
       desc: '',
       additionalInfo: {

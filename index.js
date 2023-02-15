@@ -18,7 +18,7 @@ import blogRoutes from './routes/blogRoutes.js';
 // import Blog from './models/Blog.js';
 // import RelatedProduct from './models/RelatedProduct.js';
 // import { relatedProductsData } from './data/relatedProductsData.js';
-// import { productsData, blogsData } from './data/index.js';
+// import { productsData } from './data/productsData.js';
 
 // cors onfiguration
 const corsOptions = {
