@@ -9,6 +9,7 @@ export const productsData = [
     price: 83.5,
     favourite: 5049,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -31,6 +32,7 @@ export const productsData = [
     price: 70.3,
     favourite: 2169,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -53,6 +55,7 @@ export const productsData = [
     price: 93.3,
     favourite: 1603,
     discount: 20,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -75,6 +78,7 @@ export const productsData = [
     price: 99.0,
     favourite: 1739,
     discount: 30,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -97,6 +101,7 @@ export const productsData = [
     price: 84.2,
     favourite: 2615,
     discount: null,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -119,6 +124,7 @@ export const productsData = [
     price: 71.2,
     favourite: 2528,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -141,6 +147,7 @@ export const productsData = [
     price: 61.4,
     favourite: 3318,
     discount: null,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -163,6 +170,7 @@ export const productsData = [
     price: 55.9,
     favourite: 3458,
     discount: null,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -185,6 +193,7 @@ export const productsData = [
     price: 59.2,
     favourite: 5458,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -207,6 +216,7 @@ export const productsData = [
     price: 87.0,
     favourite: 2516,
     discount: 30,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -229,6 +239,7 @@ export const productsData = [
     price: 71.3,
     favourite: 1412,
     discount: null,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -251,6 +262,7 @@ export const productsData = [
     price: 64.9,
     favourite: 4217,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -273,6 +285,7 @@ export const productsData = [
     price: 40.6,
     favourite: 1987,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -295,6 +308,7 @@ export const productsData = [
     price: 84.1,
     favourite: 3922,
     discount: 20,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -317,6 +331,7 @@ export const productsData = [
     price: 101.2,
     favourite: 4190,
     discount: 40,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -339,6 +354,7 @@ export const productsData = [
     price: 78.8,
     favourite: 3812,
     discount: 10,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -361,6 +377,7 @@ export const productsData = [
     price: 65.1,
     favourite: 5101,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -383,6 +400,7 @@ export const productsData = [
     price: 79.6,
     favourite: 4296,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -405,6 +423,7 @@ export const productsData = [
     price: 63.1,
     favourite: 3073,
     discount: null,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -427,6 +446,7 @@ export const productsData = [
     price: 72.9,
     favourite: 2641,
     discount: 10,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -449,6 +469,7 @@ export const productsData = [
     price: 97.0,
     favourite: 3799,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -471,6 +492,7 @@ export const productsData = [
     price: 82.5,
     favourite: 4829,
     discount: null,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -493,6 +515,7 @@ export const productsData = [
     price: 73.5,
     favourite: 2011,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -515,6 +538,7 @@ export const productsData = [
     price: 23.0,
     favourite: 5002,
     discount: null,
+    rating: 5,
     info: {
       desc: '',
       additionalInfo: {
@@ -537,6 +561,7 @@ export const productsData = [
     price: 103.0,
     favourite: 3461,
     discount: null,
+    rating: 3,
     info: {
       desc: '',
       additionalInfo: {
@@ -559,6 +584,7 @@ export const productsData = [
     price: 114.1,
     favourite: 2610,
     discount: 30,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
@@ -581,6 +607,7 @@ export const productsData = [
     price: 107.8,
     favourite: 1429,
     discount: null,
+    rating: 4,
     info: {
       desc: '',
       additionalInfo: {
