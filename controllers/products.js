@@ -3,7 +3,7 @@ import RelatedProduct from '../models/RelatedProduct.js';
 
 // get all products
 export const getProducts = async (req, res) => {
-  const { discount, rating, categories, price, color } = req.query;
+  const { discount = "", rating = null, categories = "", price = null, color = "" } = req.query;
 
   try {
     // Create an empty filter object
