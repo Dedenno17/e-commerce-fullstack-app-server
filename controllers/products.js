@@ -3,7 +3,7 @@ import RelatedProduct from '../models/RelatedProduct.js';
 
 // get all products
 export const getProducts = async (req, res) => {
-  const { discount = "", rating = null, categories = "", price = null, color = "" } = req.query;
+  const { discount, rating, categories, price, color } = req.query;
 
   try {
     // Create an empty filter object
@@ -21,16 +21,18 @@ export const getProducts = async (req, res) => {
 
     // Check if discount query exists and add it to the filter object
     if (discount) {
-      filter.push({ discount: { $gt: discount } });
+      filter.push({ discount: { $gte: discount } });
     }
 
     // Check if color query exists and add it to the filter object
     if (color) {
-      filter.push({ colors: { $regex: color } });
+      filter.push({ colors: { $in: [color] } });
     }
 
     // Check if rating query exists and add it to the filter object
-    if (rating) query.push({ rating: { $gte: rating } });
+    if (rating) {
+      filter.push({ rating: { $gte: rating } });
+    }
 
     // Find products based on the filter object
     let products;
