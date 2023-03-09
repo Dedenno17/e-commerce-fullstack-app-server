@@ -86,7 +86,13 @@ export const getRelatedProduts = async (req, res) => {
   const { productId } = req.params;
 
   try {
-    const relatedProducts = await RelatedProduct.find({ productId: productId });
+    const relatedProducts = await RelatedProduct.findOne({
+      productId: productId,
+    });
+    if (!relatedProducts) {
+      res.status(404).json('Not Found');
+      return;
+    }
     res.status(200).json(relatedProducts);
   } catch (error) {
     res.status(500).json({ message: error.message });
