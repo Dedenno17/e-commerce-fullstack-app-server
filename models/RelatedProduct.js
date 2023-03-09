@@ -2,10 +2,10 @@ import mongoose from 'mongoose';
 
 const RelatedProductSchema = new mongoose.Schema(
   {
-    productId: { type: mongoose.Types.ObjectId, required: true },
+    productId: { type: String, required: true, unique: true },
     relatedProducts: [
       {
-        _id: { type: mongoose.Types.ObjectId, required: true },
+        _id: { type: String, required: true, unique: true },
         title: { type: String, required: true, unique: true },
         img: { type: String, required: true },
         price: { type: Number },
