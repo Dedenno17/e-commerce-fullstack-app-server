@@ -13,6 +13,7 @@ import cartRoutes from './routes/cartRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import reviewsRoutes from './routes/reviewsRoute.js';
 import blogRoutes from './routes/blogRoutes.js';
+import paymentIntentRoutes from './routes/paymentIntentRoutes.js';
 
 // import Product from './models/Product.js';
 // import Blog from './models/Blog.js';
@@ -46,6 +47,7 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/reviews', reviewsRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/payment', paymentIntentRoutes);
 
 // connect to mongodb
 mongoose.set('strictQuery', false);
