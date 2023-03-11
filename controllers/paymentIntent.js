@@ -9,5 +9,6 @@ export const createPaymentIntent = async (req, res) => {
     automatic_payment_methods: { enabled: true },
   });
 
-  res.send({ clientSecret: paymentIntent.client_secret });
+  //   res.send({ clientSecret: paymentIntent.client_secret });
+  res.send('Success create payment intent');
 };
