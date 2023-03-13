@@ -47,7 +47,7 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/reviews', reviewsRoutes);
 app.use('/api/blogs', blogRoutes);
-app.use('/api/payment', paymentIntentRoutes);
+app.use('/api/paymentIntent', paymentIntentRoutes);
 
 // connect to mongodb
 mongoose.set('strictQuery', false);
