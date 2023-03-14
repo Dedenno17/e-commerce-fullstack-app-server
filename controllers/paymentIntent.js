@@ -1,6 +1,8 @@
 // const stripe = require('stripe')(process.env.STRIPE_SEC_KEY);
 import Stripe from 'stripe';
+import dotenv from 'dotenv';
 
+dotenv.config({ path: './.env' });
 const stripe = new Stripe(process.env.STRIPE_SEC_KEY);
 
 // create payment intent
@@ -9,7 +11,7 @@ export const createPaymentIntent = async (req, res) => {
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: totalPrice,
+      amount: parseInt(totalPrice) * 100,
       currency: 'usd',
       automatic_payment_methods: { enabled: true },
     });
