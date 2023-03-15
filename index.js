@@ -51,17 +51,19 @@ app.use('/api/blogs', blogRoutes);
 app.use('/api/paymentIntent', paymentIntentRoutes);
 app.use('/api/order', orderRoutes);
 
+// port
+const PORT = process.env.PORT || 9000;
+
 // connect to mongodb
 mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
     console.log('connect to mongodb is successful!');
+    
+    // running server
+    app.listen(PORT, () => console.log(`server is running at ${PORT}`));
   })
   .catch((err) => console.log({ err }));
+  
 
-// port
-const PORT = process.env.PORT || 9000;
-
-// running server
-app.listen(PORT, () => console.log(`server is running at ${PORT}`));
