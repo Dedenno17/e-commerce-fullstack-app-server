@@ -4,11 +4,16 @@ const orderSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
+      ref: 'User',
       required: true,
     },
     products: [
       {
-        productsId: { type: mongoose.Types.ObjectId },
+        productId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Product',
+          required: true,
+        },
         title: { type: String, required: true },
         color: { type: String, required: true },
         image: { type: String },
