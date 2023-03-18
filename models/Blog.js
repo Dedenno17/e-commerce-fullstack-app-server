@@ -7,6 +7,22 @@ const BlogSchema = new mongoose.Schema(
     content: { type: String, required: true, min: 200 },
     img: { type: String, required: true },
     categories: { type: Array },
+    comments: [
+      {
+        userId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'User',
+          required: true,
+        },
+        username: { type: String, required: true },
+        image: { type: String },
+        value: { type: String, required: true },
+        date: {
+          type: Date,
+          default: Date.now,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );

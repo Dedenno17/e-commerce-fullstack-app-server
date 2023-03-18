@@ -21,6 +21,7 @@ import paymentIntentRoutes from './routes/paymentIntentRoutes.js';
 // import RelatedProduct from './models/RelatedProduct.js';
 // import { relatedProductsData } from './data/relatedProductsData.js';
 // import { productsData } from './data/productsData.js';
+// import { blogsData } from './data/blogsData.js';
 
 // cors onfiguration
 const corsOptions = {
@@ -60,10 +61,8 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
     console.log('connect to mongodb is successful!');
-    
+
     // running server
     app.listen(PORT, () => console.log(`server is running at ${PORT}`));
   })
   .catch((err) => console.log({ err }));
-  
-

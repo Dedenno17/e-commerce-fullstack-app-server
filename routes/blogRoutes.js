@@ -1,5 +1,5 @@
 import express from 'express';
-import { getBlogs, getSingleBlog } from '../controllers/blog.js';
+import { getBlogs, getSingleBlog, addComment } from '../controllers/blog.js';
 
 const router = express.Router();
 
@@ -8,5 +8,8 @@ router.get('/', getBlogs);
 
 // get single blog
 router.get('/:id', getSingleBlog);
+
+// add comments in blog
+router.post('/comment/:id', addComment);
 
 export default router;
