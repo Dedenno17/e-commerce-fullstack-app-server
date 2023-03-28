@@ -15,6 +15,7 @@ import reviewsRoutes from './routes/reviewsRoute.js';
 import blogRoutes from './routes/blogRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import paymentIntentRoutes from './routes/paymentIntentRoutes.js';
+import wishlistRoutes from './routes/wishlistRoutes.js';
 
 // import Product from './models/Product.js';
 // import Blog from './models/Blog.js';
@@ -51,6 +52,7 @@ app.use('/api/reviews', reviewsRoutes);
 app.use('/api/blogs', blogRoutes);
 app.use('/api/paymentIntent', paymentIntentRoutes);
 app.use('/api/order', orderRoutes);
+app.use('/api/wishlist', wishlistRoutes);
 
 // port
 const PORT = process.env.PORT || 9000;
