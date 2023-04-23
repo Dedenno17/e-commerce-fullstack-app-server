@@ -1,6 +1,6 @@
-import CryptoJS from 'crypto-js';
-import User from '../models/User.js';
-import jwt from 'jsonwebtoken';
+import CryptoJS from "crypto-js";
+import User from "../models/User.js";
+import jwt from "jsonwebtoken";
 
 // register
 export const postRegister = async (req, res) => {
@@ -28,7 +28,7 @@ export const postLogin = async (req, res) => {
 
     // CHECK IF USERNAME WAS THERE
     if (!user) {
-      res.status(401).json('Wrong Credentials!');
+      res.status(401).json("Wrong Username!");
       return;
     }
 
@@ -40,7 +40,7 @@ export const postLogin = async (req, res) => {
     const originalPassword = hashedPassword.toString(CryptoJS.enc.Utf8);
 
     if (originalPassword !== req.body.password) {
-      res.status(401).json('Wrong Credentials!');
+      res.status(401).json("Wrong Password!");
       return;
     }
 
@@ -51,7 +51,7 @@ export const postLogin = async (req, res) => {
         isAdmin: user.isAdmin,
       },
       process.env.PASS_SEC,
-      { expiresIn: '3d' }
+      { expiresIn: "3d" }
     );
 
     // DESTRUCTUR PASSWORD
@@ -61,4 +61,40 @@ export const postLogin = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
+};
+
+// refresh Token and verify it
+export const postRefresh = (req, res) => {
+  const token = req.body.token;
+  if (!token) {
+    return res.status(401).json({ message: "Token tidak tersedia" });
+  }
+
+  // Verify token menggunakan secret key yang sama saat pembuatan token
+  jwt.verify(token, process.env.JWT_SEC, async (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: "Token tidak valid" });
+    }
+
+    // Jika token valid, kembalikan data user dari token
+    const userDataDecoded = decoded;
+
+    // find the user data
+    const userData = await User.findById(userDataDecoded.id);
+
+    // CREATE ACCES TOKEN
+    const accesToken = jwt.sign(
+      {
+        id: userData._id,
+        isAdmin: userData.isAdmin,
+      },
+      process.env.PASS_SEC,
+      { expiresIn: "3d" }
+    );
+
+    // DESTRUCTUR PASSWORD
+    const { password, ...others } = userData._doc;
+
+    res.status(201).json({ others, accesToken });
+  });
 };
