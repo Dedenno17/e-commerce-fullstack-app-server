@@ -1,5 +1,11 @@
 import express from "express";
-import { postRegister, postLogin, postRefresh } from "../controllers/auth.js";
+import {
+  postRegister,
+  postLogin,
+  postRefresh,
+  getLogout,
+} from "../controllers/auth.js";
+import { verifyTokenAndAuthorization } from "./verifyToken.js";
 
 const router = express.Router();
 
@@ -11,5 +17,8 @@ router.post("/login", postLogin);
 
 // refresh
 router.post("/refresh", postRefresh);
+
+// logout
+router.post("/logout", verifyTokenAndAuthorization, getLogout);
 
 export default router;

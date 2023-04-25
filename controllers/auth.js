@@ -112,3 +112,16 @@ export const postRefresh = (req, res) => {
     res.status(201).json({ others, accesToken });
   });
 };
+
+// logout
+export const getLogout = async (req, res) => {
+  // Clear the user's session data and redirect to the login page
+  req.session.destroy((err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.status(200).json("Destroy");
+      res.redirect("/login");
+    }
+  });
+};
