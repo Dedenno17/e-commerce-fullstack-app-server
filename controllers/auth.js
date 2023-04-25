@@ -15,7 +15,21 @@ export const postRegister = async (req, res) => {
 
   try {
     const savedUser = await newUser.save();
-    res.status(201).json(savedUser);
+
+    // CREATE ACCES TOKEN
+    const accesToken = jwt.sign(
+      {
+        id: savedUser._id,
+        isAdmin: savedUser.isAdmin,
+      },
+      process.env.PASS_SEC,
+      { expiresIn: "3d" }
+    );
+
+    // DESTRUCTUR PASSWORD
+    const { password, ...others } = savedUser._doc;
+
+    res.status(201).json({ others, accesToken });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
